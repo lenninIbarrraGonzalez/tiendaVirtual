@@ -1,11 +1,19 @@
-import React from 'react'
-import '../styles/components/Header.css'
+import React from "react"
+import { Link } from "react-router-dom";
+import "../styles/components/Header.css"
+
 
 const Header = () => (
   <div className="Header">
-    <h1 className="Header-title">PlatziConf Merch</h1>
+    <h1 className="Header-title">
+      <Link to="/">
+        PlatziConf Merch
+      </Link>
+    </h1>
     <div className="Header-checkout">
-      Checkout
+      <Link to="/Checkout">
+        <i className="fas fa-shopping-basket" />
+      </Link>
     </div>
   </div>
 )
