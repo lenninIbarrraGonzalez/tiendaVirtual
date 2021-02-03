@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Product = ({ product }) => (
-  <div className="Products-item">
+  <div className='Products-item'>
     <img src={product.image} alt={product.title} />
-    <div className="Product-item-info">
+    <div className='Product-item-info'>
       <h2>
         {product.title}
         <span>
