@@ -10,6 +10,7 @@ import Layout from '../components/Layout';
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
 
+// Envolcver la aplicación en el provider, y le pasamos el contexto que va a tener toda la app
 const App = () => {
   const initialState = useInitialState();
   return (

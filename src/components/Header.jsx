@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext'
+
 import '../styles/components/Header.css'
 
 
 const Header = () => {
-
+  // destructuramos cart del stado
   const { state: { cart } } = useContext(AppContext)
 
   return (
