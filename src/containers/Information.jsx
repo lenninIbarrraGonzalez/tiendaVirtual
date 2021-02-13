@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import '../styles/components/Information.css';
 import AppContext from '../context/AppContext';
 
@@ -9,6 +9,8 @@ const Information = () => {
   const form = useRef(null);
 
   const { cart } = state;
+  // haciendo uso de hook de terceros
+  const history = useHistory();
 
   const handleSubmit = () => {
     // utilizando FormData para leer los datos del form
@@ -27,7 +29,9 @@ const Information = () => {
       'phone': formData.get('phone'),
     }
 
-    addToBuyer(buyer)
+    addToBuyer(buyer);
+    history.push('/checkout/payment')
+
   }
 
   return (
