@@ -26,10 +26,17 @@ const useInitialState = () => {
     });
   };
 
+  const addToBuyer = payload => {
+    setState({
+      ...state,
+      buyer: [...state.buyer, payload]
+    })
+  }
   // retornamos  las funciones y el estado
   return {
     addToCart,
     removeFromCart,
+    addToBuyer,
     state,
   }
 };
